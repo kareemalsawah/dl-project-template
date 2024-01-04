@@ -1,0 +1,33 @@
+dataset_name: "gaussian_synthetic"
+dataset_params:
+  n_train_samples: 5000
+  n_val_samples: 512
+  n_test_samples: 512
+  batch_size: 256
+
+model_name: "example_model"
+load_model_path: null # if None, then model is initialized from scratch, otherwise should be string with path to model weights
+model_params:
+  model_size: 32
+
+loss_name: "example_loss"
+loss_params: {}
+
+trainer_name: "deep_trainer"
+trainer_params:
+  n_epochs: 200
+  lr: 0.001
+  val_freq: 100
+  save_path: "models/gaussian_synthetic/example_model/"
+  save_metrics: True
+  save_model: True
+  device: "cpu"
+  verbose: False
+  
+# logger_name: "wandb_logger"
+# logger_params:
+#   project_name: "wandb-project-name"
+#   entity: "wandb-entity-name"
+logger_name: "print_logger"
+logger_params:
+  {}
