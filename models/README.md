@@ -1,0 +1,1 @@
+This directory should contain saved information about any experiements ran, especially trained model weights and metrics.
